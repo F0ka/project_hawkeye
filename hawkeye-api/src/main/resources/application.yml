@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: project-hawkeye
+  profiles:
+    active: development
+    
+  datasource:
+    url: jdbc:h2:mem:hawkeye_db
+    driver-class-name: org.h2.Driver
+    username: hawkeye
+    password: secure_password
+    
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        
+  h2:
+    console:
+      enabled: true
+      path: /hawkeye/h2-console
+
+server:
+  port: 8081                    # Changed from 8080 to avoid VS Code conflict
+  servlet:
+    context-path: /hawkeye/api
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+
+hawkeye:
+  version: 1.0.0
+  description: "Project Hawkeye - Professional Spring Boot API Framework"
