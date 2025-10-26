@@ -81,7 +81,7 @@ The project follows a layered architecture with clear separation of concerns:
 - Java 21 or higher
 - Gradle 8.x (or use included wrapper)
 - Git
-- Your favorite IDE (IntelliJ IDEA recommended)
+- Your favorite IDE (I use VS Code)
 
 ### Quick Start
 
